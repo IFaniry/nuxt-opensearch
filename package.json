@@ -1,0 +1,30 @@
+{
+  "name": "nuxthub-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.14.0",
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxthub/core": "^0.7.0",
+    "cheerio": "^1.0.0-rc.12",
+    "config": "^3.3.12",
+    "nuxt": "^3.12.2",
+    "p-limit": "^6.1.0",
+    "vuetify-nuxt-module": "^0.16.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.3.13",
+    "@spectrum-css/typography": "^6.1.1",
+    "eslint": "^9.5.0",
+    "vue-tsc": "^2.0.22",
+    "wrangler": "3.64.0"
+  }
+}

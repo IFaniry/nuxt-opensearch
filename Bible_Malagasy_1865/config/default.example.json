@@ -1,0 +1,10 @@
+{
+  "elastic": {
+    "local": true,
+    "node": "https://localhost:9200",
+    "username": "elastic",
+    "password": "LongMotDePasse",
+    "caFingerprint": "87:B8:E8:67:...",
+    "ca": "C:\\...\\elasticsearch-8.14.3\\config\\certs\\http_ca.crt"
+  }
+}
