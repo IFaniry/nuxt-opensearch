@@ -34,9 +34,9 @@ const client = new Client({
 
 const MG_BIBLE_INDEX = "mg-bible-verses";
 
-if (!client.indices.exists({ index: MG_BIBLE_INDEX })) {
-  await client.indices.create({ index: MG_BIBLE_INDEX });
-}
+await client.indices.delete({ index: MG_BIBLE_INDEX });
+
+await client.indices.create({ index: MG_BIBLE_INDEX });
 
 const limit = pLimit(4);
 
@@ -60,6 +60,9 @@ async function elasticSearchIndex(book) {
           bookFullName: book.FullName,
           bookChapterQty: book.ChapterQty,
           bookShortName: book.ShortName,
+          bookRank: Number(
+            book.PathName.substring(0, book.PathName.indexOf("_"))
+          ),
           chapter,
           verse: verseNum,
           text: verseText,

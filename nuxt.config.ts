@@ -6,13 +6,28 @@ export default defineNuxtConfig({
 
   // Nuxt Modules
   // https://nuxt.com/modules
-  modules: ["@nuxthub/core", "@nuxt/eslint", "vuetify-nuxt-module"],
+  modules: [
+    "@nuxthub/core",
+    "@nuxt/eslint",
+    "vuetify-nuxt-module",
+    "@vueuse/nuxt",
+  ],
 
   hub: {
     database: false,
     kv: false,
     blob: false,
     cache: true,
+  },
+
+  runtimeConfig: {
+    // The private keys which are only available server-side
+    local: false,
+    node: "",
+    username: "",
+    password: "",
+    ca: "",
+    verseIndex: "",
   },
 
   nitro: {
